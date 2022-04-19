@@ -1,23 +1,26 @@
 #include <iostream> 
 #include "Map.h"
 #include "ship.h"
+#include "locale.h"
 
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "Russian");
+
     Map a;
-
     
-    int xb, yb, sb;
-    bool ob;
-    cin >> sb >> xb >> yb >> ob; 
-    Ship b1(sb, xb, yb, ob);
-    a.SetMap(b1.GetX(), b1.GetY(), b1.GetOrientation(), b1.GetSize());
-
-    cin >> sb >> xb >> yb >> ob; 
-    Ship b2(sb, xb, yb, ob);
-    a.SetMap(b2.GetX(), b2.GetY(), b2.GetOrientation(), b2.GetSize());
-
-    a.PrintMap();
+    bool g = 1;
+    a.FullSetMap();
+    while (g)
+    {
+        cout << "стреляйте: " << endl;
+        int x, y;
+        cin >> x >> y;
+        a.shot(x, y);
+        a.PrintMap();
+        g = a.game();
+    }
+    cout << "игра окончена" << endl;
     return 0;
 }
