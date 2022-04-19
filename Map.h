@@ -3,13 +3,20 @@
 class Map
 {
 public:
-    void PrintMap() const; //вывод на экран своей карты
+    void PrintMap() const; //РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ СЃРІРѕРµР№ РєР°СЂС‚С‹
  
-    int GetMap(int x, int y)  { return map[x][y]; } // возвращение элемента карты
+    int GetMap(int x, int y)  { return map[x][y]; } // РІРѕР·РІСЂР°С‰РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РєР°СЂС‚С‹
 
-    void SetMap(int x, int y, bool ori, int size); //изменение массива(карты)
+    void SetMap(int x, int y, bool ori, int size); //РёР·РјРµРЅРµРЅРёРµ РјР°СЃСЃРёРІР°(РєР°СЂС‚С‹)
    
+    void shot(int x, int y); //РІС‹СЃС‚СЂРµР»
+
+    bool game();
+
+    void FullSetMap(); //РІРІРѕРґ РєРѕСЂР°Р±Р»РµР№
+
+    bool check(int x, int y, bool ori, int size);
+
 private:
     int map[10][10] = { 0 };
 };
-
