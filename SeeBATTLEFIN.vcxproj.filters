@@ -26,9 +26,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Function.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="ship.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>

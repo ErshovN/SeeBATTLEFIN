@@ -9,7 +9,14 @@ public:
 
     void SetMap(int x, int y, bool ori, int size); //изменение массива(карты)
    
+    void shot(int x, int y); //выстрел
+
+    bool game();
+
+    void FullSetMap(); //ввод кораблей
+
+    bool check(int x, int y, bool ori, int size);
+
 private:
     int map[10][10] = { 0 };
 };
-

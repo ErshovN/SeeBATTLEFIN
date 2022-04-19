@@ -26,4 +26,3 @@ private:
     int size = 0;
     bool orientation = 0;
 };
-
